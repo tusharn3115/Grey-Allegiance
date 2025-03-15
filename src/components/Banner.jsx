@@ -14,7 +14,7 @@ SwiperCore.use([Navigation]);
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[90vh] overflow-hidden">
       {/* Swiper Slider */}
       <Swiper
         modules={[Autoplay, Navigation]}
@@ -32,21 +32,23 @@ const Banner = () => {
             />
 
             {/* Text Overlay */}
-            <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-              <p className="text-lg mb-10">
+            <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">
+              <p className="text-sm md:text-lg mb-4 md:mb-10">
                 Protection, Defence & Access Control
               </p>
-              <h1 className="text-7xl font-semibold">Security service</h1>
-              <h1 className="text-7xl font-semibold">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+                Security service
+              </h1>
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-semibold leading-tight">
                 for your personal safety
               </h1>
             </div>
 
             {/* Contact Button */}
-            <div className="absolute mt-16 top-[34rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-5 text-white">
-              <h3 className="text-xl font-semibold">Contact us</h3>
-              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
-                <FaArrowRight className="text-black" />
+            <div className="absolute mt-6 md:mt-16 top-[70%] md:top-[45rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row items-center gap-3 md:gap-5 text-white">
+              <h3 className="text-lg md:text-xl font-semibold">Contact us</h3>
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center">
+                <FaArrowRight className="text-black text-lg md:text-2xl cursor-pointer" />
               </div>
             </div>
           </SwiperSlide>

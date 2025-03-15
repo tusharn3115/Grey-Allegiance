@@ -5,8 +5,8 @@ const UtilityBarDetails = ({ logo, title, desc }) => {
     <div className="timings flex items-center gap-2">
       {logo}
       <div>
-        <h1 className="font-semibold text-sm">{title}</h1>
-        <p className="text-zinc-600 text-sm">
+        <h1 className="font-semibold text-sm md:text-xs">{title}</h1>
+        <p className="text-zinc-600 text-sm md:text-xs">
           {desc}
         </p>
       </div>
