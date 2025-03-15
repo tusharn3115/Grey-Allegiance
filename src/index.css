@@ -65,3 +65,9 @@
     top: 29rem !important;
   }
 }
+
+@media (max-width: 820px) {
+  .contactBtn {
+    top: 45rem !important;
+  }
+}

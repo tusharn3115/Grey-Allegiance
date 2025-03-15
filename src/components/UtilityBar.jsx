@@ -25,7 +25,7 @@ const UtilityBar = () => {
           <UtilityBarDetails
             logo={<IoTimeOutline size="28" className="md:size-7" />}
             title="WORKING HOURS"
-            desc="Mon - Sun: 8.00am - 10.30pm"
+            desc="Mon - Sun: 8.00 am - 10.30 pm"
           />
           <UtilityBarDetails
             logo={<FaPhone size="24" className="md:size-7" />}
