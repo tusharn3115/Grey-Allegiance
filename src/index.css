@@ -27,6 +27,21 @@
   }
 }
 
+
+/* Customizing button text */
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "›"; /* Change from "next" to an arrow symbol */
+  font-size: 20px !important; 
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "‹"; /* Change from "next" to an arrow symbol */
+  font-size: 20px !important; 
+}
+
+
 /* Adjust for mobile screens */
 @media (max-width: 768px) {
   .swiper-button-prev,
@@ -45,15 +60,8 @@
   }
 }
 
-/* Customizing button text */
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
-  content: "›"; /* Change from "next" to an arrow symbol */
-  font-size: 20px !important; 
-}
-
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-prev:after {
-  content: "‹"; /* Change from "next" to an arrow symbol */
-  font-size: 20px !important; 
+@media (max-width: 768px) {
+  .contactBtn {
+    top: 29rem !important;
+  }
 }

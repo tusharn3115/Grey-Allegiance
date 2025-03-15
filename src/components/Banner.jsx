@@ -45,7 +45,7 @@ const Banner = () => {
             </div>
 
             {/* Contact Button */}
-            <div className="absolute mt-6 md:mt-16 top-[70%] md:top-[45rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row items-center gap-3 md:gap-5 text-white">
+            <div className="absolute contactBtn mt-6 md:mt-16 top-[32rem] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row items-center gap-3 md:gap-5 text-white">
               <h3 className="text-lg md:text-xl font-semibold">Contact us</h3>
               <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center">
                 <FaArrowRight className="text-black text-lg md:text-2xl cursor-pointer" />
