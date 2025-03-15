@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaUser } from "react-icons/fa";
 import React from "react";
 import HamburgerMenu from "./HamburgerMenu";
@@ -14,8 +14,24 @@ const Navbar = () => {
     "Contact Us",
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white shadow-md w-full relative overflow-hidden">
+    <nav className="relative bg-white w-full overflow-visible">
       <div className="max-w-[1140px] mx-auto p-5 flex justify-between items-center">
         {/* Navigation Links */}
         <ul className="hidden md:flex md:gap-6 md:items-center lg:space-x-8 text-md font-semibold">
@@ -36,10 +52,40 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* User Profile */}
-        <div className="hidden md:flex bg-black text-white items-center gap-2 px-4 py-2 rounded-md cursor-pointer hover:bg-zinc-700 transition duration-300">
-          <FaUser size={24} />
-          <span className="text-sm font-semibold">User Profile</span>
+        <div className="flex items-center gap-2">
+          {/*  */}
+          <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-zinc-700 cursor-pointer">
+            Request a Quote
+          </button>
+
+          {/* User Profile */}
+          <div className="relative" ref={menuRef}>
+            <button
+              className="hidden md:flex text-black items-center gap-2 px-4 py-2 rounded-md cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <FaUser size={24} />
+            </button>
+
+            {isOpen && (
+              <div className="absolute right-0 top-full mt-2 w-48 bg-white border-2 shadow-xl rounded-md z-[9999]">
+                <ul className="flex flex-col p-2">
+                  <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+                    SIGN IN
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+                    CREATE ACCOUNT
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+                    BOOKINGS
+                  </li>
+                  <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
+                    MY ACCOUNT
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Hamburger Menu for Mobile */}

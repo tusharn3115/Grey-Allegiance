@@ -30,7 +30,7 @@ const UtilityBar = () => {
           <UtilityBarDetails
             logo={<FaPhone size="24" className="md:size-7" />}
             title="CALL US"
-            desc="+91 00000 00000"
+            desc="+91 67250 04444"
           />
           <UtilityBarDetails
             logo={<IoIosMail size="30" className="md:size-7" />}
