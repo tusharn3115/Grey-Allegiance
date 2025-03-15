@@ -7,7 +7,8 @@ import { IoIosMail } from "react-icons/io";
 
 const UtilityBar = () => {
   return (
-    <div className="w-[1140px] mx-auto pt-8 flex items-center justify-between">
+    <div className="border-b-2 border-zinc-100 p-8">
+      <div className="w-[1140px] mx-auto flex items-center justify-between">
       {/* logo */}
       <div className="logo flex items-center gap-2">
         <img src={Logo} alt="logo" className="w-[75px]" />
@@ -18,23 +19,24 @@ const UtilityBar = () => {
       </div>
 
       {/* details */}
-      <div className="details flex items-center justify-evenly gap-8">
+      <div className="details flex items-center justify-evenly gap-14">
         <UtilityBarDetails
           logo={<IoTimeOutline size="35" />}
           title="WORKING HOURS"
           desc="Moday - Sunday: 8.00am to 10.30pm"
         />
         <UtilityBarDetails
-          logo={<FaPhone size="35" />}
+          logo={<FaPhone size="30" />}
           title="CALL US"
           desc="+91 00000 00000"
         />
         <UtilityBarDetails
-          logo={<IoIosMail size="35" />}
+          logo={<IoIosMail size="40" />}
           title="MAIL US"
           desc="greyallegiance@gmail.com"
         />
       </div>
+    </div>
     </div>
   );
 };
