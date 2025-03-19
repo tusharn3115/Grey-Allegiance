@@ -31,7 +31,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="relative bg-white w-full overflow-visible">
+    <nav className="relative bg-white w-full overflow-visible border-b border-zinc-300">
       <div className="max-w-[1140px] mx-auto p-5 flex justify-between items-center">
         {/* Navigation Links */}
         <ul className="hidden md:flex md:gap-6 md:items-center lg:space-x-8 text-md font-semibold">
