@@ -17,7 +17,7 @@ const RequestQuote = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-[35%]"></div>
+        <div className="absolute inset-0 bg-black opacity-[38%]"></div>
         <h1 className="relative text-white lg:text-7xl md:text-6xl font-medium text-center">
           Request a Quote
         </h1>
@@ -29,22 +29,34 @@ const RequestQuote = () => {
           At Grey Allegiance Security, we are committed to delivering
           exceptional security services that provide peace of mind at an
           affordable cost. With a team of highly trained professionals, we
-          prioritize your safety with tailored security solutions.
+          prioritize your safety with tailored security solutions. Our expertise
+          extends across multiple industries, ensuring that businesses, events,
+          and individuals receive the highest level of protection.
         </p>
 
         <p className="text-gray-700 text-lg leading-relaxed mt-6">
           Whether you need on-site security personnel, surveillance systems, or
-          risk assessment services, we are here to help. Reach out today to
-          explore how we can enhance your security.
+          risk assessment services, we are here to help. Our proactive approach
+          focuses on identifying potential threats before they arise, ensuring
+          that your security measures remain one step ahead. Reach out today to
+          explore how we can enhance your security with customized solutions
+          tailored to your unique needs.
         </p>
 
         <p className="text-gray-700 text-lg leading-relaxed mt-6">
-          Looking for employment? Visit our{" "}
+          Looking for employment? Join a team that values integrity, teamwork,
+          and professional growth. Visit our{" "}
           <span className="font-semibold text-zinc-700 cursor-pointer">
             Job Board
           </span>{" "}
-          for current opportunities. Join a team that values integrity,
-          teamwork, and professional growth.
+          for current opportunities. We offer competitive pay, professional
+          training, and a supportive work environment that fosters career
+          advancement.
+        </p>
+
+        <p className="text-gray-700 text-lg leading-relaxed mt-6 font-semibold">
+          Please note that all job inquiries must be made on Indeed and will be
+          blocked if made on the form below.
         </p>
 
         {/* Form Section */}
@@ -84,7 +96,7 @@ const RequestQuote = () => {
             placeholder="Message"
             className="border border-gray-300 p-3 rounded w-full col-span-1 md:col-span-2 focus:ring-2 focus:ring-zinc-700 h-40"
           ></textarea>
-          <button className="w-full md:w-auto bg-zinc-700 text-white py-3 px-6 rounded hover:bg-zinc-900 transition cursor-pointer">
+          <button className="lg:w-48 md:w-auto bg-zinc-700 text-white py-3 px-6 rounded hover:bg-zinc-900 transition cursor-pointer">
             REQUEST A QUOTE
           </button>
         </form>
