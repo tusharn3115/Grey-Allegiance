@@ -1,5 +1,5 @@
 import React from "react";
-import UtilityBar from "./components/utilityBar";
+import UtilityBar from "./components/UtilityBar";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
