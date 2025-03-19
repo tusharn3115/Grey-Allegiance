@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHourglassHalf, FaLightbulb, FaAnchor } from "react-icons/fa";
-import chooseUs from "../assets/choose-us.jpg";
+import chooseUs from "../../../assets/choose-us.jpg";
 
 const WhyChooseUs = () => {
   return (

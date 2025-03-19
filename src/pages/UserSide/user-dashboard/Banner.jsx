@@ -6,8 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { FaArrowRight } from "react-icons/fa";
 
-import banner_img1 from "../assets/banner1.jpg";
-import banner_img2 from "../assets/banner2.jpg";
+import banner_img1 from "../../../assets/banner1.jpg";
+import banner_img2 from "../../../assets/banner2.jpg";
 
 // ✅ Register Swiper Modules
 SwiperCore.use([Navigation]);

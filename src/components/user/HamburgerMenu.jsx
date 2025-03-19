@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaUser, FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../assets/logo.png"; // Import Logo
+import Logo from "../../assets/logo.png";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);

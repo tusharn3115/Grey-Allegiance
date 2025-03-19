@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import AboutUsImg from "../assets/aboutUsImg.webp";
+import AboutUsImg from "../../../assets/AboutUsImg.webp";
 
 const AboutUs = () => {
   return (

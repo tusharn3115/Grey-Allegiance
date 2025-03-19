@@ -1,10 +1,10 @@
 import React from "react";
-import alarm from "../assets/alarm.webp";
-import constructionsite from "../assets/constructionsite.webp";
-import event from "../assets/event.webp";
-import firewatch from "../assets/firewatch.webp";
-import mobilepatrol from "../assets/mobilePatrol.webp";
-import serveillance from "../assets/serveillance.webp";
+import alarm from "../../../assets/alarm.webp";
+import constructionsite from "../../../assets/constructionsite.webp";
+import event from "../../../assets/event.webp";
+import firewatch from "../../../assets/firewatch.webp";
+import mobilepatrol from "../../../assets/mobilePatrol.webp";
+import serveillance from "../../../assets/serveillance.webp";
 
 const services = [
   {

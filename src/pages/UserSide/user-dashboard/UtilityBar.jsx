@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../../../assets/logo.png";
 import { IoTimeOutline } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";

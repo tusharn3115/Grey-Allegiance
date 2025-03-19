@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
-import securityImage from "../../assets/forgetpass.jpg";
+import securityImage from "../../../assets/forgetpass.jpg";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");

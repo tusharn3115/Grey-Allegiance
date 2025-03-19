@@ -7,7 +7,7 @@ import {
   FaEye,
   FaEyeSlash,
 } from "react-icons/fa";
-import securityImage from "../../assets/SignUpImg.jpg";
+import securityImage from "../../../assets/SignUpImg.jpg";
 
 const Signup = () => {
   const [credentials, setCredentials] = useState({

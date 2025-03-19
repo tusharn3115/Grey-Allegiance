@@ -53,10 +53,10 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          {/*  */}
-          <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-zinc-700 cursor-pointer">
-            Request a Quote
-          </button>
+          {/* request quote */}
+            <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-zinc-700 cursor-pointer">
+              Request a Quote
+            </button>
 
           {/* User Profile */}
           <div className="relative" ref={menuRef}>
