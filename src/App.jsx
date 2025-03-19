@@ -8,12 +8,14 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Footer from "./components/Footer";
 import Login from "./components/Login-SignUp/Login";
 import SignInPage from "./components/Login-SignUp/SignUp";
+import ForgotPassword from "./components/Login-SignUp/ForgotPassword";
 
 const App = () => {
   return (
     <>
       {/* <Login /> */}
       <SignInPage />
+      {/* <ForgotPassword /> */}
       {/* <UtilityBar />
       <Navbar />
       <Banner />
