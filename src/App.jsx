@@ -12,8 +12,8 @@ import SignInPage from "./components/Login-SignUp/SignUp";
 const App = () => {
   return (
     <>
-      <Login />
-      {/* <SignInPage /> */}
+      {/* <Login /> */}
+      <SignInPage />
       {/* <UtilityBar />
       <Navbar />
       <Banner />

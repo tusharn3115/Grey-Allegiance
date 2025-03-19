@@ -26,36 +26,36 @@ const Login = () => {
         </div>
 
         {/* Sign In Form */}
-        <div className="p-8 flex-1 flex flex-col justify-center">
-          <h2 className="text-3xl font-semibold text-center mb-2">Welcome Back</h2>
-          <p className="text-center text-gray-400 mb-6">Sign in to access your account</p>
+        <div className="p-10 flex-1 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold text-center mb-4">Welcome Back to Grey Allegiance!</h2>
+        <p className="text-center text-gray-400 mb-6">Log in to access your dashboard and manage your account.</p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="relative">
-              <FaEnvelope className="absolute left-3 top-3 text-gray-400" />
+              <FaEnvelope className="absolute left-3 top-4 text-gray-400" />
               <input
                 type="email"
                 name="email"
                 value={credentials.email}
                 onChange={handleChange}
-                placeholder="Email"
+                placeholder="Enter your email"
                 className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                 required
               />
             </div>
             <div className="relative">
-              <FaLock className="absolute left-3 top-3 text-gray-400" />
+              <FaLock className="absolute left-3 top-4 text-gray-400" />
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 value={credentials.password}
                 onChange={handleChange}
-                placeholder="Password"
+                placeholder="Enter your password"
                 className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                 required
               />
               <button
                 type="button"
-                className="absolute right-3 top-3 text-gray-400 focus:outline-none"
+                className="absolute right-3 top-4 text-gray-400 focus:outline-none"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
@@ -77,18 +77,8 @@ const Login = () => {
               Sign In
             </button>
           </form>
-          <div className="flex items-center my-4">
-            <hr className="flex-grow border-gray-500" />
-            <span className="px-2 text-gray-400">OR</span>
-            <hr className="flex-grow border-gray-500" />
-          </div>
-          <div className="flex justify-center space-x-4">
-            <button className="flex w-full items-center justify-center cursor-pointer space-x-2 bg-white text-zinc-900 py-2 px-4 rounded-lg hover:bg-gray-300">
-              <FcGoogle /> <span>Google</span>
-            </button>
-          </div>
           <p className="text-center text-gray-400 mt-4">
-            Don't have an account? <a href="#" className="text-white underline">Sign up</a>
+            New to Grey Allegiance? <a href="#" className="text-white underline">Create an account</a>
           </p>
         </div>
       </div>
