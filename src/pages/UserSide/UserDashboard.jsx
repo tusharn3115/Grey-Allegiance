@@ -6,6 +6,7 @@ import AboutUs from "./user-dashboard/AboutUs";
 import Services from "./user-dashboard/Services";
 import WhyChooseUs from "./user-dashboard/WhyChooseUs";
 import Footer from "../../components/user/Footer";
+import FooterAll from '../../components/user/FooterAll';
 
 const UserDashboard = () => {
   return (
@@ -16,7 +17,7 @@ const UserDashboard = () => {
       <AboutUs />
       <Services />
       <WhyChooseUs />
-      <Footer />
+      <FooterAll />
     </div>
   )
 }

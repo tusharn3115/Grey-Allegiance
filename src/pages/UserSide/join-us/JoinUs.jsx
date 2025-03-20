@@ -29,7 +29,7 @@ const JoinUs = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen px-4">
+      <div className="flex flex-col items-center justify-center min-h-screen">
         <div className="w-full max-w-5xl p-10 bg-white mb-20">
           {/* Header Section */}
           <h2 className="text-5xl font-bold text-center text-gray-900 mb-6">

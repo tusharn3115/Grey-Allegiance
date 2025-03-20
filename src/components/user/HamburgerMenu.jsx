@@ -1,11 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaUser, FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navLinks = ["Home", "Services", "Join Us", "Blog", "About Us", "Contact Us"];
+  const location = useLocation();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Join Us", path: "/join-us" },
+    { name: "Blog", path: "/blog" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Contact Us", path: "/contact-us" },
+  ];
+
+  // Close menu when navigating
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="md:hidden">
@@ -41,13 +55,15 @@ const HamburgerMenu = () => {
         </div>
 
         {navLinks.map((link) => (
-          <li key={link} className="relative cursor-pointer p-4">
-            <h1
-              onClick={() => setMenuOpen(false)}
-              className="pb-2 transition relative uppercase text-black"
+          <li key={link.name} className="relative cursor-pointer p-4">
+            <Link
+              to={link.path}
+              className={`pb-2 transition relative uppercase text-black ${
+                location.pathname === link.path ? "text-zinc-600" : "text-black"
+              }`}
             >
-              {link}
-            </h1>
+              {link.name}
+            </Link>
           </li>
         ))}
 
