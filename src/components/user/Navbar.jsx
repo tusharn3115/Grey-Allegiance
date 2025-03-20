@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { FaUser } from "react-icons/fa";
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const location = useLocation(); // Get the current route
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -40,13 +40,12 @@ const Navbar = () => {
             <li key={link.name} className="relative cursor-pointer">
               <Link
                 to={link.path}
-                onClick={() => setActive(link.name)}
                 className={`pb-2 transition relative uppercase ${
-                  active === link.name ? "text-zinc-600" : "text-black"
+                  location.pathname === link.path ? "text-zinc-600" : "text-black"
                 }`}
               >
                 {link.name}
-                {active === link.name && (
+                {location.pathname === link.path && (
                   <div className="absolute left-0 bottom-0 w-full h-[2px] bg-zinc-600 transition-all duration-300"></div>
                 )}
               </Link>
@@ -55,12 +54,12 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
-          {/* request quote */}
-            <Link to="/request-quote">
+          {/* Request Quote */}
+          <Link to="/request-quote">
             <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-zinc-700 cursor-pointer">
               Request a Quote
             </button>
-            </Link>
+          </Link>
 
           {/* User Profile */}
           <div className="relative" ref={menuRef}>
