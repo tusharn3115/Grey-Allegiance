@@ -6,7 +6,6 @@ import backgroundImage from "../../../assets/request-quote.webp";
 const RequestQuote = () => {
   return (
     <>
-      <Navbar />
 
       {/* Hero Section */}
       <div
@@ -102,7 +101,6 @@ const RequestQuote = () => {
         </form>
       </div>
 
-      <FooterAll />
     </>
   );
 };

@@ -21,7 +21,7 @@ const AboutUs = () => {
           SECURITY for <span className="text-zinc-500">your Safety</span>
         </h2>
         <p className="text-gray-700 font-medium">
-          Security is not just about technology; it’s about trust and reliability.
+          Security is not just about technology; it&apos;s about trust and reliability.
           We ensure that our solutions provide round-the-clock protection, keeping
           you and your assets safe.
         </p>

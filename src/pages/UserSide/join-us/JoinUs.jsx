@@ -29,8 +29,6 @@ const JoinUs = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className="flex flex-col items-center justify-center min-h-screen px-4">
         <div className="w-full max-w-5xl p-10 bg-white mb-20">
           {/* Header Section */}
@@ -169,7 +167,6 @@ const JoinUs = () => {
           </Swiper>
         </div>
       </div>
-      <FooterAll />
     </>
   );
 };

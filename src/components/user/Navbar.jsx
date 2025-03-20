@@ -2,16 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import { FaUser } from "react-icons/fa";
 import React from "react";
 import HamburgerMenu from "./HamburgerMenu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const navLinks = [
-    "Home",
-    "Services",
-    "Join Us",
-    "Blog",
-    "About Us",
-    "Contact Us",
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "Join Us", path: "/join-us" },
+    { name: "Blog", path: "/blog" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Contact Us", path: "/contact-us" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -36,27 +37,30 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="hidden md:flex md:gap-6 md:items-center lg:space-x-8 text-md font-semibold">
           {navLinks.map((link) => (
-            <li key={link} className="relative cursor-pointer">
-              <h1
-                onClick={() => setActive(link)}
+            <li key={link.name} className="relative cursor-pointer">
+              <Link
+                to={link.path}
+                onClick={() => setActive(link.name)}
                 className={`pb-2 transition relative uppercase ${
-                  active === link ? "text-zinc-600" : "text-black"
+                  active === link.name ? "text-zinc-600" : "text-black"
                 }`}
               >
-                {link}
-                {active === link && (
+                {link.name}
+                {active === link.name && (
                   <div className="absolute left-0 bottom-0 w-full h-[2px] bg-zinc-600 transition-all duration-300"></div>
                 )}
-              </h1>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="flex items-center gap-2">
           {/* request quote */}
+            <Link to="/request-quote">
             <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-zinc-700 cursor-pointer">
               Request a Quote
             </button>
+            </Link>
 
           {/* User Profile */}
           <div className="relative" ref={menuRef}>

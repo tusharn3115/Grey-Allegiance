@@ -6,56 +6,55 @@ import Loader from "../components/Loader";
 // import GrayAlert from "../components/alerts/GrayAlert";
 // import WarningAlert from "../components/alerts/WarningAlert";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Navbar from "../components/user/Navbar";
-import Footer from "../components/user/Footer";
+import FooterAll from "../components/user/FooterAll";
 
 const UserSideLayout = ({ children }) => {
-  const { isVisible, message, alertType } = useSelector((state) => state.alert);
-  const isVisibleLoader = useSelector((state) => state.loader.isVisible);
-  const [isManuallyVisible, setIsManuallyVisible] = useState(false);
+  // const { isVisible, message, alertType } = useSelector((state) => state.alert);
+  // const isVisibleLoader = useSelector((state) => state.loader.isVisible);
+  // const [isManuallyVisible, setIsManuallyVisible] = useState(false);
 
-  useEffect(() => {
-    if (isVisible) {
-      setIsManuallyVisible(false);
+  // useEffect(() => {
+  //   if (isVisible) {
+  //     setIsManuallyVisible(false);
 
-      setTimeout(() => {
-        setIsManuallyVisible(true);
-      }, 300);
-    }
-  }, [isVisible]);
+  //     setTimeout(() => {
+  //       setIsManuallyVisible(true);
+  //     }, 300);
+  //   }
+  // }, [isVisible]);
 
-  const renderAlert = () => {
-    switch (alertType) {
-      case "success":
-        return <SuccessAlert message={message} initialState={true} />;
-      case "failed":
-        return <ErrorAlert message={message} initialState={true} />;
-      case "black":
-        return <BlackAlert message={message} initialState={true} />;
-      case "blue":
-        return <BlueAlert message={message} initialState={true} />;
-      case "gray":
-        return <GrayAlert message={message} initialState={true} />;
-      case "warning":
-        return <WarningAlert message={message} initialState={true} />;
-      default:
-        return null;
-    }
-  };
+  // const renderAlert = () => {
+  //   switch (alertType) {
+  //     case "success":
+  //       return <SuccessAlert message={message} initialState={true} />;
+  //     case "failed":
+  //       return <ErrorAlert message={message} initialState={true} />;
+  //     case "black":
+  //       return <BlackAlert message={message} initialState={true} />;
+  //     case "blue":
+  //       return <BlueAlert message={message} initialState={true} />;
+  //     case "gray":
+  //       return <GrayAlert message={message} initialState={true} />;
+  //     case "warning":
+  //       return <WarningAlert message={message} initialState={true} />;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <div className={"main"}>
-      {isManuallyVisible && (
+      {/* {isManuallyVisible && (
         <div className="fixed top-0 left-0 w-full z-50">{renderAlert()}</div>
       )}
 
-      {isVisibleLoader && <Loader />}
+      {isVisibleLoader && <Loader />} */}
       <div>
         <Navbar />
 
         <div>{children}</div>
-        <Footer />
+        <FooterAll />
       </div>
     </div>
   );
