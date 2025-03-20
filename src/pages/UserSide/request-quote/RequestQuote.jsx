@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../../../components/user/Navbar";
 import FooterAll from "../../../components/user/FooterAll";
-import backgroundImage from "../../../assets/request-quote.webp";
+import backgroundImage from "../../../assets/request-quote.jpg";
+import './RequestQuote.css';
 
 const RequestQuote = () => {
   return (
@@ -16,8 +17,8 @@ const RequestQuote = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-[38%]"></div>
-        <h1 className="relative text-white lg:text-7xl md:text-6xl font-medium text-center">
+        <div className="absolute inset-0 bg-black opacity-[40%]"></div>
+        <h1 className="heading relative text-white lg:text-7xl md:text-6xl font-medium text-center">
           Request a Quote
         </h1>
       </div>

@@ -7,6 +7,7 @@ import RequestQuote from "../pages/UserSide/request-quote/RequestQuote";
 import UserSideLayout from "../layout/UserSideLayout";
 import AboutUs from "../pages/UserSide/aboutus/AboutUs";
 import JoinUs from "../pages/UserSide/join-us/JoinUs";
+import ContactUs from "../pages/UserSide/contact-us/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,14 @@ const router = createBrowserRouter([
     element: (
       <UserSideLayout>
         <JoinUs />
+      </UserSideLayout>
+    ),
+  },
+  {
+    path: "/contact-us",
+    element: (
+      <UserSideLayout>
+        <ContactUs />
       </UserSideLayout>
     ),
   },
