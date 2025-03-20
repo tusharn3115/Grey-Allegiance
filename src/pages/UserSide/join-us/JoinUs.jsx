@@ -134,7 +134,7 @@ const JoinUs = () => {
         </div>
 
         {/* Swiper Section */}
-        <div className="w-full max-w-6xl text-center mb-10">
+        <div className="w-full max-w-6xl text-center mb-10 p-5">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Work Culture</h2>
           <Swiper
             slidesPerView={1}

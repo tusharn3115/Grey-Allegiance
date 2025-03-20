@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import AboutUsImg from "../../../assets/aboutUsImg.webp";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -21,9 +22,9 @@ const AboutUs = () => {
           SECURITY for <span className="text-zinc-500">your Safety</span>
         </h2>
         <p className="text-gray-700 font-medium">
-          Security is not just about technology; it&apos;s about trust and reliability.
-          We ensure that our solutions provide round-the-clock protection, keeping
-          you and your assets safe.
+          Security is not just about technology; it&apos;s about trust and
+          reliability. We ensure that our solutions provide round-the-clock
+          protection, keeping you and your assets safe.
         </p>
         <p className="text-gray-600 font-medium">
           <strong>Grey Allegiance Security</strong> excels in personal security
@@ -36,12 +37,15 @@ const AboutUs = () => {
         </p>
         <p className="text-gray-600 font-medium">
           At Grey Allegiance Security, we prioritize discretion and efficiency,
-          ensuring that our clients receive seamless protection without intrusion.
+          ensuring that our clients receive seamless protection without
+          intrusion.
         </p>
         <div className="flex justify-center lg:justify-start">
-          <button className="bg-zinc-500 text-white px-6 py-3 rounded-full flex items-center gap-2 font-semibold hover:bg-zinc-800 transition cursor-pointer">
-            Read more <ArrowRight size={18} />
-          </button>
+          <Link to="/about-us">
+            <button className="bg-zinc-500 text-white px-6 py-3 rounded-full flex items-center gap-2 font-semibold hover:bg-zinc-800 transition cursor-pointer">
+              Read more <ArrowRight size={18} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
