@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "Join Us", path: "/join-us" },
-    { name: "Blog", path: "/blog" },
+    { name: "Blogs", path: "/blogs" },
     { name: "About Us", path: "/about-us" },
     { name: "Contact Us", path: "/contact-us" },
   ];
