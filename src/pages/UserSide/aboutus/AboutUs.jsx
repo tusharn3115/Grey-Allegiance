@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { FaShieldAlt, FaBullseye, FaEye } from "react-icons/fa";
 import aboutUsImg from "../../../assets/about.jpg";
-import aboutBanner from "../../../assets/aboutBanner.jpg";
+import aboutUs from "../../../assets/aboutUs.jpg";
 import team1 from "../../../assets/img1.webp";
 import team2 from "../../../assets/img2.webp";
 import team3 from "../../../assets/img3.webp";
@@ -14,13 +14,13 @@ const AboutUs = () => {
       <div
         className="relative w-full min-h-[300px] sm:min-h-[400px] flex items-center justify-center"
         style={{
-          backgroundImage: `url(${aboutBanner})`,
+          backgroundImage: `url(${aboutUs})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "bottom",
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <h1 className="relative text-white text-4xl sm:text-5xl md:text-6xl font-medium text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-transparent opacity-80"></div>
+        <h1 className="relative text-white text-6xl font-extrabold tracking-wide drop-shadow-lg sm:text-5xl md:text-6xl text-center">
           About Us
         </h1>
       </div>

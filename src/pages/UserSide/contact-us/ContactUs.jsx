@@ -21,8 +21,8 @@ return (
                 backgroundPosition: "center",
             }}
         >
-            <div className="absolute inset-0 bg-black opacity-[40%]"></div>
-            <h1 className="heading relative text-white lg:text-7xl md:text-6xl font-medium text-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-transparent opacity-80"></div>
+            <h1 className="heading relative text-white font-extrabold tracking-wide drop-shadow-lg lg:text-7xl md:text-6xl text-center">
                 Contact Us
             </h1>
         </div>

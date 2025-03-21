@@ -8,6 +8,7 @@ import UserSideLayout from "../layout/UserSideLayout";
 import AboutUs from "../pages/UserSide/aboutus/AboutUs";
 import JoinUs from "../pages/UserSide/join-us/JoinUs";
 import ContactUs from "../pages/UserSide/contact-us/ContactUs";
+import Blogs from "../pages/UserSide/blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ const router = createBrowserRouter([
     element: (
       <UserSideLayout>
         <ContactUs />
+      </UserSideLayout>
+    ),
+  },
+  {
+    path: "/blogs",
+    element: (
+      <UserSideLayout>
+        <Blogs />
       </UserSideLayout>
     ),
   },
