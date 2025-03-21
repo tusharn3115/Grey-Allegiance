@@ -1,41 +1,121 @@
 import React from "react";
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaRss,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-const FooterAll = () => {
+const Footer = () => {
   return (
-    <footer className="relative bg-gray-900 text-white text-center pt-16 pb-6 mt-14">
-      {/* Footer Content */}
-      <div className="px-6">
-        <p className="text-gray-300 max-w-2xl mx-auto text-sm">
-          Grey Allegiance Security is dedicated to providing top-tier
-          protection with innovative security solutions. Our commitment to
-          safety and reliability ensures peace of mind for individuals and
-          businesses alike.
-        </p>
-        <div className="flex justify-center gap-4 mt-4">
-          <div className="bg-zinc-700 p-3 rounded-full text-black cursor-pointer hover:opacity-80">
-            <FaTwitter className="text-white" />
+    <footer className="bg-black text-white py-12">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 grid-cols-1 gap-10">
+        {/* Grey Allegiance Description */}
+        <div>
+          <h2 className="text-2xl font-bold">Grey Allegiance</h2>
+          <p className="text-gray-400 text-sm mt-4">
+            Grey Allegiance is one of the best marketing themes with which you
+            can create astounding websites. It is easy to use, highly
+            customizable, and built with a modern approach.
+          </p>
+          {/* Social Icons */}
+          <div className="flex gap-3 mt-4">
+            <div className="bg-gray-800 p-2 rounded-md hover:bg-zinc-400">
+              <FaFacebookF />
+            </div>
+            <div className="bg-gray-800 p-2 rounded-md hover:bg-zinc-400">
+              <FaInstagram />
+            </div>
+            <div className="bg-gray-800 p-2 rounded-md hover:bg-zinc-400">
+              <FaXTwitter />
+            </div>
           </div>
-          <div className="bg-zinc-700 p-3 rounded-full text-black cursor-pointer hover:opacity-80">
-            <FaFacebookF className="text-white" />
-          </div>
-          <div className="bg-zinc-700 p-3 rounded-full text-black cursor-pointer hover:opacity-80">
-            <FaInstagram className="text-white" />
+        </div>
+
+        {/* Quick Links with Navigation */}
+        <div>
+          <h3 className="text-lg font-semibold">Quick Links</h3>
+          <ul className="mt-3 space-y-2 text-gray-400 text-sm">
+            <li>
+              <Link
+                to="/services"
+                className="hover:underline hover:text-zinc-300"
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/join-us"
+                className="hover:underline hover:text-zinc-300"
+              >
+                Join Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/request-quote"
+                className="hover:underline hover:text-zinc-300"
+              >
+                Request Quote
+              </Link>
+            </li>
+            <li>
+              <Link to="/blogs" className="hover:underline hover:text-zinc-300">
+                Blogs
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact-us"
+                className="hover:underline hover:text-zinc-300"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about-us"
+                className="hover:underline hover:text-zinc-300"
+              >
+                About Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Get In Touch */}
+        <div>
+          <h3 className="text-lg font-semibold">Get In Touch</h3>
+          <div className="mt-3 space-y-2 text-gray-400 text-sm">
+            <p className="flex items-center gap-2">
+              <FaPhoneAlt className="text-zinc-400" /> (209) 555-0104
+            </p>
+            <p className="flex items-center gap-2">
+              <FaEnvelope className="text-zinc-400" /> deanna.curtis@example.com
+            </p>
+            <p className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-zinc-400" /> 4140 Parker Rd.
+              Allentown, New Mexico 31134
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="mt-6 text-gray-500 text-sm">
-        Grey Allegiance © All Rights Reserved - 2025
+      {/* Footer Bottom */}
+      <div className="border-t border-gray-700 mt-8 pt-4 text-gray-400 text-sm flex flex-col md:flex-row items-center lg:justify-evenly sm:justify-between text-center gap-4 px-4">
+        <span>Copyright © 2025 Grey Allegiance All Rights Reserved.</span>
+        <div className="flex gap-6">
+          <Link
+            to="/privacy-policy"
+            className="hover:underline hover:text-zinc-300"
+          >
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="hover:underline hover:text-zinc-300">
+            Terms & Conditions
+          </Link>
+        </div>
       </div>
     </footer>
   );
 };
 
-export default FooterAll;
+export default Footer;
