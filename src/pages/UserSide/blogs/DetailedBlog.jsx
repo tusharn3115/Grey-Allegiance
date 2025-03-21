@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import blogImage1 from "../../../assets/blog1.jpg";
 import { RiAdminLine } from "react-icons/ri";
 import { FaEye } from "react-icons/fa";
-import { IoArrowBack } from "react-icons/io5"; // Back Icon
+import { IoArrowBack } from "react-icons/io5";
+import { PiTagBold } from "react-icons/pi"; // Tag Icon
 
 const blogData = [
   {
@@ -28,6 +29,7 @@ const blogData = [
       "Lastly, cybersecurity is not just about technology; it’s about awareness and education. Companies must conduct regular training programs to educate employees on security best practices, phishing attack detection, and password hygiene. A well-informed workforce can significantly reduce the risk of security breaches.\n\n" +
       "By integrating these advanced security techniques, businesses and individuals can enhance their digital safety and stay resilient against ever-evolving cyber threats. Security is an ongoing process that requires vigilance, adaptation, and continuous learning in an increasingly digital world.",
     image: blogImage1,
+    tags: ["#events", "#insurance", "#loans", "#sales", "#trainings"],
   },
 ];
 
@@ -43,7 +45,7 @@ const DetailedBlog = () => {
     <>
       {/* Hero Section */}
       <div
-        className="relative w-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full min-h-[370px] sm:min-h-[400px] md:min-h-[450px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${blog.image})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-transparent opacity-80"></div>
@@ -57,7 +59,7 @@ const DetailedBlog = () => {
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 text-sm sm:text-base font-medium mb-4 sm:mb-6 transition-all mb-4 cursor-pointer"
+          className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 text-sm sm:text-base font-medium mb-4 sm:mb-6 transition-all"
         >
           <IoArrowBack className="text-lg sm:text-xl" />
           <span>Back to Blogs</span>
@@ -86,6 +88,21 @@ const DetailedBlog = () => {
         <p className="text-base sm:text-lg text-gray-700 mt-4 sm:mt-6 leading-relaxed whitespace-pre-line">
           {blog.description}
         </p>
+
+        {/* Tags Section */}
+        <div className="mt-8 sm:mt-12 flex items-center space-x-3">
+          <PiTagBold className="text-gray-500 text-lg sm:text-xl" />
+          <div className="flex flex-wrap gap-3">
+            {blog.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm sm:text-base font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

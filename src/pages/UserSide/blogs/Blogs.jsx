@@ -34,7 +34,7 @@ const Blogs = () => {
     <>
       {/* Hero Section */}
       <div
-        className="relative w-full min-h-[450px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full min-h-[370px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${blogHeaderImg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-transparent opacity-80"></div>
