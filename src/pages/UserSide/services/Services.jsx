@@ -78,9 +78,9 @@ const Services = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   {service.description}
                 </p>
-                <p className="text-gray-500 text-sm mb-4">1 hr | Get a quote</p>
+                <p className="text-gray-500 text-sm mb-4">1 hr | Book Service Now</p>
                 <Link
-                  to="/book-service"
+                  to="/service-booking"
                   className="mt-5 inline-block bg-black text-white px-6 py-2 rounded-lg font-medium tracking-wide hover:bg-gray-500 transition duration-200"
                 >
                   Book Now
