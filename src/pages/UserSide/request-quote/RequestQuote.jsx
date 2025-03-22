@@ -31,7 +31,9 @@ const RequestQuote = () => {
         reset(); // Reset the form inputs after submission
       }
     } catch (error) {
-      setServerError(error?.response?.data?.message || "❌ Something went wrong!");
+      setServerError(
+        error?.response?.data?.message || "❌ Something went wrong!"
+      );
     } finally {
       setLoading(false);
     }
@@ -55,12 +57,35 @@ const RequestQuote = () => {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-5xl w-full mx-auto px-6 md:px-8 py-12">
-        <p className="text-gray-700 text-lg leading-relaxed">
-          At Grey Allegiance Security, we are committed to delivering exceptional security services that provide peace of mind at an affordable cost. With a team of highly trained professionals, we prioritize your safety with tailored security solutions.
-        </p>
+      <div className="max-w-5xl w-full mx-auto px-6 md:px-8 py-16">
+        {/* Content Section */}
+        <div className="max-w-5xl w-full mx-auto px-6 md:px-8 py-10">
+          <p className="text-gray-700 text-lg leading-relaxed">
+            At Grey Allegiance Security, we are committed to delivering
+            exceptional security services that provide peace of mind at an
+            affordable cost. With a team of highly trained professionals, we
+            prioritize your safety with tailored security solutions.
+          </p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+          <p className="text-gray-700 text-lg leading-relaxed mt-6">
+            Whether you need on-site security personnel, surveillance systems,
+            or risk assessment services, we are here to help. Reach out today to
+            explore how we can enhance your security.
+          </p>
+
+          <p className="text-gray-700 text-lg leading-relaxed mt-6">
+            Looking for employment? Visit our{" "}
+            <span className="font-semibold text-zinc-700 cursor-pointer">
+              Job Board
+            </span>{" "}
+            for current opportunities. Join a team that values integrity,
+            teamwork, and professional growth.
+          </p>
+        </div>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10"
+        >
           {/* First Name */}
           <div>
             <input
@@ -69,7 +94,9 @@ const RequestQuote = () => {
               {...register("firstName")}
               className="border border-gray-300 p-3 rounded w-full focus:ring-2 focus:ring-zinc-700"
             />
-            {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
+            {errors.firstName && (
+              <p className="text-red-500 text-sm">{errors.firstName.message}</p>
+            )}
           </div>
 
           {/* Last Name */}
@@ -80,7 +107,9 @@ const RequestQuote = () => {
               {...register("lastName")}
               className="border border-gray-300 p-3 rounded w-full focus:ring-2 focus:ring-zinc-700"
             />
-            {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName.message}</p>}
+            {errors.lastName && (
+              <p className="text-red-500 text-sm">{errors.lastName.message}</p>
+            )}
           </div>
 
           {/* Mobile */}
@@ -91,7 +120,9 @@ const RequestQuote = () => {
               {...register("mobile")}
               className="border border-gray-300 p-3 rounded w-full focus:ring-2 focus:ring-zinc-700"
             />
-            {errors.mobile && <p className="text-red-500 text-sm">{errors.mobile.message}</p>}
+            {errors.mobile && (
+              <p className="text-red-500 text-sm">{errors.mobile.message}</p>
+            )}
           </div>
 
           {/* Email */}
@@ -102,7 +133,9 @@ const RequestQuote = () => {
               {...register("email")}
               className="border border-gray-300 p-3 rounded w-full focus:ring-2 focus:ring-zinc-700"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
           </div>
 
           {/* City Dropdown */}
@@ -123,7 +156,9 @@ const RequestQuote = () => {
               <option value="Langley">Langley</option>
               <option value="Nanaimo">Nanaimo</option>
             </select>
-            {errors.location && <p className="text-red-500 text-sm">{errors.location.message}</p>}
+            {errors.location && (
+              <p className="text-red-500 text-sm">{errors.location.message}</p>
+            )}
           </div>
 
           {/* Reason of Inquiry */}
@@ -137,7 +172,11 @@ const RequestQuote = () => {
               <option value="Employment">Employment</option>
               <option value="Consultation">Consultation</option>
             </select>
-            {errors.reasonOfInquiry && <p className="text-red-500 text-sm">{errors.reasonOfInquiry.message}</p>}
+            {errors.reasonOfInquiry && (
+              <p className="text-red-500 text-sm">
+                {errors.reasonOfInquiry.message}
+              </p>
+            )}
           </div>
 
           {/* Message */}
@@ -147,7 +186,9 @@ const RequestQuote = () => {
               {...register("message")}
               className="border border-gray-300 p-3 rounded w-full focus:ring-2 focus:ring-zinc-700 h-40"
             ></textarea>
-            {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
+            )}
           </div>
 
           {/* Success & Error Messages */}
@@ -163,12 +204,14 @@ const RequestQuote = () => {
           )}
 
           {/* Submit Button & Loader */}
-          <div className="col-span-1 md:col-span-2 flex justify-center relative">
+          <div className="col-span-1 md:col-span-2 flex flex-col items-center relative">
             <button
               type="submit"
               disabled={loading}
               className={`lg:w-48 md:w-auto py-3 px-6 rounded transition cursor-pointer ${
-                loading ? "bg-gray-500 cursor-not-allowed" : "bg-zinc-700 hover:bg-zinc-900 text-white"
+                loading
+                  ? "bg-gray-500 cursor-not-allowed"
+                  : "bg-zinc-700 hover:bg-zinc-900 text-white"
               }`}
             >
               {loading ? "Processing..." : "REQUEST A QUOTE"}
@@ -177,11 +220,24 @@ const RequestQuote = () => {
             {/* Full-screen Loader */}
             {loading && (
               <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                <Watch visible={true} height="80" width="80" color="#4fa94d" ariaLabel="loading" />
+                <Watch
+                  visible={true}
+                  height="80"
+                  width="80"
+                  color="#4fa94d"
+                  ariaLabel="loading"
+                />
               </div>
             )}
+
+            {/* Success Message (Appears after loader) */}
+            {successMessage && !loading && (
+              <p className="text-green-600 font-semibold mt-4">
+                {successMessage}
+              </p>
+            )}
           </div>
-        </form>l
+        </form>
       </div>
     </>
   );

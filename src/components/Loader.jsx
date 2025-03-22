@@ -1,9 +1,10 @@
-import loader from "../assets/logo.png";
+import React from "react";
+import { Watch } from "react-loader-spinner";
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 w-full h-full z-50 bg-loader-900 flex items-center justify-center">
-      <img src={loader} alt="loader" />
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <Watch visible={true} height="80" width="80" color="#BAC4C8" ariaLabel="loading" />
     </div>
   );
 };
