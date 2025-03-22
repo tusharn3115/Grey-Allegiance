@@ -15,6 +15,9 @@ import ServiceBooking from "../pages/UserSide/services/ServiceBooking";
 import BookingUserDetails from "../pages/UserSide/services/BookingUserDetails";
 import SuccessBooking from "../pages/UserSide/services/SuccessBooking";
 import MyAccount from "../pages/UserSide/user-dashboard/UserAccount/MyAccount";
+import Login from "../pages/UserSide/Login-SignUp/Login";
+import Signup from "../pages/UserSide/Login-SignUp/SignUp";
+import ForgotPassword from "../pages/UserSide/Login-SignUp/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,34 @@ const router = createBrowserRouter([
       </>
     ),
   },
+
+
+  // login-signup
+  {
+    path: "/log-in",
+    element: (
+      <>
+        <Login />
+      </>
+    ),
+  },
+  {
+    path: "/sign-up",
+    element: (
+      <>
+        <Signup />
+      </>
+    ),
+  },
+  {
+    path: "/forgot-password",
+    element: (
+      <>
+        <ForgotPassword />
+      </>
+    ),
+  },
+
 
   // user side
   {

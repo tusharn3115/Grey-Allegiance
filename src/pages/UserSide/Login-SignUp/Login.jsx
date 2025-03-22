@@ -1,24 +1,11 @@
 import React, { useState } from "react";
-import {
-  FaEnvelope,
-  FaLock,
-  FaUser,
-  FaPhone,
-  FaEye,
-  FaEyeSlash,
-} from "react-icons/fa";
-import securityImage from "../../../assets/SignUpImg.jpg";
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import loginImage from "../../../assets/loginImg.jpg";
+import { Link } from "react-router-dom";
 
-const Signup = () => {
-  const [credentials, setCredentials] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    password: "",
-    confirmPassword: "",
-  });
+const Login = () => {
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
-  const [acceptTerms, setAcceptTerms] = useState(false);
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -28,11 +15,7 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (credentials.password !== credentials.confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-    console.log("Signing up with", credentials, acceptTerms);
+    console.log("Logging in with", credentials);
   };
 
   return (
@@ -41,33 +24,19 @@ const Signup = () => {
         {/* Security Image */}
         <div className="hidden relative md:flex flex-1">
           <img
-            src={securityImage}
+            src={loginImage}
             alt="Security"
-            className="w-full h-full object-cover object-center" 
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
-        {/* Sign Up Form */}
+        {/* Log In Form */}
         <div className="p-8 flex-1 flex flex-col justify-center">
-          <h2 className="text-2xl font-bold text-center mb-4">
-            Join Grey Allegiance!
-          </h2>
+          <h2 className="text-2xl font-bold text-center mb-4">Welcome Back!</h2>
           <p className="text-center text-zinc-400 mb-6">
-            Create an account to access exclusive features.
+            Log in to access your account.
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="relative">
-              <FaUser className="absolute left-3 top-4 text-zinc-400" />
-              <input
-                type="text"
-                name="fullName"
-                value={credentials.fullName}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-                className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
-            </div>
             <div className="relative">
               <FaEnvelope className="absolute left-3 top-4 text-zinc-400" />
               <input
@@ -76,18 +45,6 @@ const Signup = () => {
                 value={credentials.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
-            </div>
-            <div className="relative">
-              <FaPhone className="absolute left-3 top-4 text-zinc-400" />
-              <input
-                type="tel"
-                name="phone"
-                value={credentials.phone}
-                onChange={handleChange}
-                placeholder="Enter your phone number"
                 className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                 required
               />
@@ -103,18 +60,6 @@ const Signup = () => {
                 className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
                 required
               />
-            </div>
-            <div className="relative">
-              <FaLock className="absolute left-3 top-4 text-zinc-400" />
-              <input
-                type={showPassword ? "text" : "password"}
-                name="confirmPassword"
-                value={credentials.confirmPassword}
-                onChange={handleChange}
-                placeholder="Confirm your password"
-                className="w-full pl-10 p-3 bg-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-white"
-                required
-              />
               <button
                 type="button"
                 className="absolute right-3 top-4 text-zinc-400 focus:outline-none"
@@ -124,34 +69,23 @@ const Signup = () => {
               </button>
             </div>
             {error && <p className="text-red-500 text-sm">{error}</p>}
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                checked={acceptTerms}
-                onChange={() => setAcceptTerms(!acceptTerms)}
-                className="mr-2"
-                required
-              />
-              <label className="text-zinc-400">
-                I agree to Grey Allegiance Security's{" "}
-                <a href="#" className="text-white underline">
-                  Terms & Conditions
-                </a>
-                .
-              </label>
-            </div>
             <button
               type="submit"
               className="w-full bg-white text-zinc-900 hover:bg-zinc-300 font-semibold py-2 rounded-lg"
             >
-              Sign Up
+              Log In
             </button>
           </form>
-          <p className="text-center text-zinc-400 mt-4">
-            Already have an account?{" "}
-            <a href="#" className="text-white underline">
-              Log in
+          <div className="text-center mt-4">
+            <a href="/forgot-password" className="text-white underline">
+              Forgot Password?
             </a>
+          </div>
+          <p className="text-center text-zinc-400 mt-4">
+            Don't have an account? {" "}
+            <Link to="/sign-up" className="text-white underline">
+              Sign Up
+            </Link>
           </p>
         </div>
       </div>
@@ -159,4 +93,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
