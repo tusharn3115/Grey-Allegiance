@@ -16,8 +16,8 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800 text-white px-4">
-      <div className="flex flex-col md:flex-row bg-zinc-800 shadow-2xl rounded-2xl overflow-hidden w-full max-w-3xl">
+    <div className="flex h-screen w-full items-center justify-center bg-zinc-950 text-white lg:px-4">
+      <div className="flex flex-col md:flex-row lg:bg-zinc-800 shadow-2xl rounded-2xl overflow-hidden w-full max-w-3xl">
         {/* Security Image */}
         <div className="hidden md:flex flex-1">
           <img src={securityImage} alt="Security" className="w-full h-full object-cover" />
@@ -25,7 +25,7 @@ const ForgotPassword = () => {
 
         {/* Forgot Password Form */}
         <div className="p-10 flex-1 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-center mb-2">Forgot Password?</h2>
+          <h2 className="lg:text-3xl text-4xl font-bold text-center mb-10">Forgot Password?</h2>
           <p className="text-center text-zinc-400 mb-6">No worries! Enter your email, and we’ll send you a reset link.</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">

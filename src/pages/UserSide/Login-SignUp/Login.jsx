@@ -19,8 +19,8 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-zinc-900 text-white">
-      <div className="flex flex-col md:flex-row bg-zinc-800 shadow-lg rounded-2xl overflow-hidden w-full max-w-5xl">
+    <div className="flex h-screen w-full items-center justify-center bg-zinc-950 text-white">
+      <div className="flex flex-col md:flex-row lg:bg-zinc-800 shadow-lg rounded-2xl overflow-hidden w-full max-w-5xl">
         {/* Security Image */}
         <div className="hidden relative md:flex flex-1">
           <img
@@ -32,7 +32,7 @@ const Login = () => {
 
         {/* Log In Form */}
         <div className="p-8 flex-1 flex flex-col justify-center">
-          <h2 className="text-2xl font-bold text-center mb-4">Welcome Back!</h2>
+          <h2 className="lg:text-2xl text-4xl font-bold text-center mb-4">Welcome Back!</h2>
           <p className="text-center text-zinc-400 mb-6">
             Log in to access your account.
           </p>

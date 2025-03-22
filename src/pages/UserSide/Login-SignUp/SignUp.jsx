@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
     <div className="flex h-screen w-full items-center justify-center bg-zinc-950 text-white">
-      <div className="flex flex-col md:flex-row bg-zinc-900 shadow-xl rounded-2xl overflow-hidden w-full max-w-5xl">
+      <div className="flex flex-col md:flex-row lg:bg-zinc-900 shadow-xl rounded-2xl overflow-hidden w-full max-w-5xl">
         <div className="hidden md:flex flex-1">
           <img
             src={securityImage}
