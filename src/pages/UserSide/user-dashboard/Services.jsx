@@ -1,7 +1,7 @@
 import React from "react";
 import alarm from "../../../assets/alarm.webp";
 import constructionsite from "../../../assets/constructionsite.webp";
-import event from "../../../assets/event.webp";
+import event from "../../../assets/eventSecurity.jpg";
 import firewatch from "../../../assets/firewatch.webp";
 import mobilepatrol from "../../../assets/mobilePatrol.webp";
 import serveillance from "../../../assets/serveillance.webp";
@@ -60,7 +60,7 @@ const Services = () => {
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-48 object-cover object-top"
+              className="w-full h-48 object-cover object-center"
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
