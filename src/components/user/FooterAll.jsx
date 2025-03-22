@@ -86,14 +86,13 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Get In Touch</h3>
           <div className="mt-3 space-y-2 text-gray-400 text-sm">
             <p className="flex items-center gap-2">
-              <FaPhoneAlt className="text-zinc-400" /> (209) 555-0104
+              <FaPhoneAlt className="text-zinc-400" /> (437) 982-9280
             </p>
             <p className="flex items-center gap-2">
-              <FaEnvelope className="text-zinc-400" /> deanna.curtis@example.com
+              <FaEnvelope className="text-zinc-400" /> allegiancegrey@gmail.com
             </p>
             <p className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-zinc-400" /> 4140 Parker Rd.
-              Allentown, New Mexico 31134
+              <FaMapMarkerAlt className="text-zinc-400" /> 19181 34A Ave #101, Surrey, BC V3Z 0Z7
             </p>
           </div>
         </div>
