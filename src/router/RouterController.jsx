@@ -12,6 +12,7 @@ import Blogs from "../pages/UserSide/blogs/Blogs";
 import DetailedBlog from "../pages/UserSide/blogs/DetailedBlog";
 import Services from "../pages/UserSide/services/Services";
 import ServiceBooking from "../pages/UserSide/services/ServiceBooking";
+import BookingUserDetails from "../pages/UserSide/services/BookingUserDetails";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,14 @@ const router = createBrowserRouter([
     element: (
       <UserSideLayout>
         <ServiceBooking />
+      </UserSideLayout>
+    ),
+  },
+  {
+    path: "/booking-user-details",
+    element: (
+      <UserSideLayout>
+        <BookingUserDetails />
       </UserSideLayout>
     ),
   },
