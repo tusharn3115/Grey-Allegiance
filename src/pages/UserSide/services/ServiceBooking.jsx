@@ -171,10 +171,10 @@ const ServiceBooking = () => {
 
             {/* "Book Service" Button */}
             {selectedTime && (
-              <div className="mt-6">
-                <Link to="">
-                  <button className="w-full p-3 bg-zinc-500 text-white rounded-md text-lg font-semibold hover:bg-zinc-600 transition">
-                    Book Service
+              <div className="mt-10">
+                <Link to="/booking-user-details">
+                  <button className="w-full p-3 bg-zinc-500 cursor-pointer text-white rounded-md text-lg font-semibold hover:bg-zinc-600 transition">
+                    CONTINUE
                   </button>
                 </Link>
               </div>

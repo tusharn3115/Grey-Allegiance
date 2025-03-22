@@ -13,6 +13,8 @@ import DetailedBlog from "../pages/UserSide/blogs/DetailedBlog";
 import Services from "../pages/UserSide/services/Services";
 import ServiceBooking from "../pages/UserSide/services/ServiceBooking";
 import BookingUserDetails from "../pages/UserSide/services/BookingUserDetails";
+import SuccessBooking from "../pages/UserSide/services/SuccessBooking";
+import MyAccount from "../pages/UserSide/user-dashboard/UserAccount/MyAccount";
 
 const router = createBrowserRouter([
   {
@@ -95,6 +97,26 @@ const router = createBrowserRouter([
       <UserSideLayout>
         <BookingUserDetails />
       </UserSideLayout>
+    ),
+  },
+  {
+    path: "/success-booking",
+    element: (
+      <>
+        <SuccessBooking />
+      </>
+    ),
+  },
+
+
+
+  // user account
+  {
+    path: "/my-account",
+    element: (
+      <>
+        <MyAccount />
+      </>
     ),
   },
 ]);

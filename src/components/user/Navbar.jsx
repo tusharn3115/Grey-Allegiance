@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
-  const location = useLocation(); // Get the current route
+  const location = useLocation();
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -41,7 +41,9 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 className={`pb-2 transition relative uppercase ${
-                  location.pathname === link.path ? "text-zinc-600" : "text-black"
+                  location.pathname === link.path
+                    ? "text-zinc-600"
+                    : "text-black"
                 }`}
               >
                 {link.name}
@@ -69,21 +71,20 @@ const Navbar = () => {
             >
               <FaUser size={24} />
             </button>
-
             {isOpen && (
               <div className="absolute right-0 top-full mt-2 w-48 bg-white border-2 shadow-xl rounded-md z-[9999]">
                 <ul className="flex flex-col p-2">
                   <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
-                    SIGN IN
+                    <Link to="/signin">SIGN IN</Link>
                   </li>
                   <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
-                    CREATE ACCOUNT
+                    <Link to="/register">CREATE ACCOUNT</Link>
                   </li>
                   <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
-                    BOOKINGS
+                    <Link to="/bookings">BOOKINGS</Link>
                   </li>
                   <li className="py-2 px-4 hover:bg-gray-200 cursor-pointer">
-                    MY ACCOUNT
+                    <Link to="/my-account">MY ACCOUNT</Link>
                   </li>
                 </ul>
               </div>
