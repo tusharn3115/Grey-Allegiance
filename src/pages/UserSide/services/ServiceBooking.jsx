@@ -169,7 +169,7 @@ const ServiceBooking = () => {
             {/* Afternoon Slots */}
             <div className="mt-4">
               <h4 className="text-md font-semibold text-gray-700 mb-2">
-                ☀ Afternoon
+                ☀️ Afternoon
               </h4>
               <div className="grid grid-cols-3 gap-2">
                 {afternoonSlots.map((time, index) => (
